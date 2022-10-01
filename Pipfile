@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 robotframework-seleniumlibrary = "*"
+robotframework-tidy = "*"
 
 [dev-packages]
 pylint = "*"
