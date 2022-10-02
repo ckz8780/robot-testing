@@ -5,8 +5,8 @@ Library             SeleniumLibrary
 Resource            ../../../resources/common.robot
 Resource            ../../../resources/user_defined_ebay.robot
 
-Test Setup    Start Testcase
-Test Teardown    Finish Testcase
+Test Setup    common.Start Testcase
+Test Teardown    common.Finish Testcase
 
 *** Test Cases ***
 Verify basic search functionality for eBay
@@ -14,6 +14,6 @@ Verify basic search functionality for eBay
     [Tags]    functional
 
     # Keywords from *** Keywords *** section below
-    Verify Search Results
-    Filter Results
-    Verify Filter Results
+    user_defined_ebay.Verify Search Results
+    user_defined_ebay.Filter Results
+    user_defined_ebay.Verify Filter Results
