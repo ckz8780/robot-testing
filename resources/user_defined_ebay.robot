@@ -8,7 +8,7 @@ Library     SeleniumLibrary
 Verify Search Results
     Input Text    id:gh-ac    mobile
     Click Button    id:gh-btn
-    Page Should Contain    results for mobileeee
+    Page Should Contain    results for mobile
 
 # Filter to new items only
 Filter Results
