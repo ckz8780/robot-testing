@@ -4,12 +4,12 @@ Resource    ./HeaderPage.robot
 
 
 *** Variables ***
-${Search_result_text}    results for
+${search_result_text}    results for
 
 *** Keywords ***
 # Note ${search_text} comes from the HeaderPage resource
 Verify Search Results
-    Page Should Contain    ${Search_result_text} ${search_text}
+    Page Should Contain    ${search_result_text} ${search_text}
 
 # Select "New" items only from the condition dropdown
 Select Product Condition
