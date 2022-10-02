@@ -9,6 +9,8 @@ ${search_result_text}    results for
 *** Keywords ***
 # Note ${search_text} comes from the HeaderPage resource
 Verify Search Results
+    # Make the search text to verify results for an argument
+    [Arguments]    ${search_text}
     Page Should Contain    ${search_result_text} ${search_text}
 
 # Select "New" items only from the condition dropdown

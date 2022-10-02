@@ -14,16 +14,34 @@ Test Teardown       CommonFunctionality.Finish Testcase
 Verify Basic Search Functionality
     [Documentation]    This test case verifies the basic search functionality for eBay
     [Tags]    functional
+    
+    # We are searching for and confirming results for the term "mobile"
+    HeaderPage.Input Search Text and Click Search    mobile
+    SearchResultsPage.Verify Search Results    mobile
 
-    HeaderPage.Input Search Text and Click Search
-    SearchResultsPage.Verify Search Results
+Verify Search for Books
+    [Documentation]    This test case verifies we can search for a specific term
+    [Tags]    functional
+    
+    # We are searching for and confirming results for the term "mobile"
+    HeaderPage.Input Search Text and Click Search    book
+    SearchResultsPage.Verify Search Results    book
+
+Verify Search for Model Airplanes
+    [Documentation]    This test case verifies we can search for a specific term
+    [Tags]    functional
+    
+    # We are searching for and confirming results for the term "mobile"
+    HeaderPage.Input Search Text and Click Search    model airplane
+    SearchResultsPage.Verify Search Results    model airplane
 
 Verify Search Filtering
     [Documentation]    This test verifies that searches can be filtered
     [Tags]    functional
 
-    HeaderPage.Input Search Text and Click Search
-    SearchResultsPage.Verify Search Results
+    # We are searching for and confirming results for the term "mobile"
+    HeaderPage.Input Search Text and Click Search    mobile
+    SearchResultsPage.Verify Search Results    mobile
     SearchResultsPage.Select Product Condition
     SearchResultsPage.Select Delivery Options
     SearchResultsPage.Verify Filter Results
