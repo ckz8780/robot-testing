@@ -25,7 +25,6 @@ Verify Search Filtering
     HeaderPage.Input Search Text and Click Search
     SearchResultsPage.Verify Search Results
     SearchResultsPage.Select Product Condition
-    Sleep    3s
     SearchResultsPage.Select Delivery Options
     SearchResultsPage.Verify Filter Results
 
