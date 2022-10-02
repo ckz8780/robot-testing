@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.8.12 on darwin)" generated="20221002 11:46:43.924" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.8.12 on darwin)" generated="20221002 11:47:11.128" rpa="false" schemaversion="3">
 <suite id="s1" name="Tests" source="/Users/ckz8780/dev/robot-testing/tests">
 <suite id="s1-s1" name="Ebay" source="/Users/ckz8780/dev/robot-testing/tests/ebay">
 <suite id="s1-s1-s1" name="Functional" source="/Users/ckz8780/dev/robot-testing/tests/ebay/functional">
@@ -10,61 +10,86 @@
 <arg>https://www.ebay.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221002 11:46:44.114" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
-<status status="PASS" starttime="20221002 11:46:44.114" endtime="20221002 11:46:46.680"/>
+<msg timestamp="20221002 11:47:11.307" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<status status="PASS" starttime="20221002 11:47:11.307" endtime="20221002 11:47:14.320"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221002 11:46:46.681" endtime="20221002 11:46:46.873"/>
+<status status="PASS" starttime="20221002 11:47:14.320" endtime="20221002 11:47:14.505"/>
 </kw>
-<status status="PASS" starttime="20221002 11:46:44.113" endtime="20221002 11:46:46.874"/>
+<status status="PASS" starttime="20221002 11:47:11.306" endtime="20221002 11:47:14.505"/>
 </kw>
 <kw name="Verify Search Results" library="user_defined_ebay">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:gh-ac</arg>
 <arg>mobile</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221002 11:46:46.875" level="INFO">Typing text 'mobile' into text field 'id:gh-ac'.</msg>
-<status status="PASS" starttime="20221002 11:46:46.874" endtime="20221002 11:46:47.598"/>
+<msg timestamp="20221002 11:47:14.506" level="INFO">Typing text 'mobile' into text field 'id:gh-ac'.</msg>
+<status status="PASS" starttime="20221002 11:47:14.506" endtime="20221002 11:47:15.155"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:gh-btn</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221002 11:46:47.599" level="INFO">Clicking button 'id:gh-btn'.</msg>
-<status status="PASS" starttime="20221002 11:46:47.598" endtime="20221002 11:46:49.454"/>
+<msg timestamp="20221002 11:47:15.155" level="INFO">Clicking button 'id:gh-btn'.</msg>
+<status status="PASS" starttime="20221002 11:47:15.155" endtime="20221002 11:47:17.263"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>results for mobileeee</arg>
+<arg>results for mobile</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20221002 11:46:50.449" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20221002 11:46:50.450" level="FAIL">Page should have contained text 'results for mobileeee' but did not.</msg>
-<status status="FAIL" starttime="20221002 11:46:49.454" endtime="20221002 11:46:50.450"/>
+<msg timestamp="20221002 11:47:17.331" level="INFO">Current page contains text 'results for mobile'.</msg>
+<status status="PASS" starttime="20221002 11:47:17.263" endtime="20221002 11:47:17.331"/>
 </kw>
-<status status="FAIL" starttime="20221002 11:46:46.874" endtime="20221002 11:46:50.451"/>
+<status status="PASS" starttime="20221002 11:47:14.505" endtime="20221002 11:47:17.331"/>
 </kw>
 <kw name="Filter Results" library="user_defined_ebay">
-<status status="NOT RUN" starttime="20221002 11:46:50.451" endtime="20221002 11:46:50.451"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath: /html/body/div[5]/div[4]/div[1]/div/div[1]/div[2]/div[2]/span[1]/button/span/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221002 11:47:17.332" level="INFO">Clicking element 'xpath: /html/body/div[5]/div[4]/div[1]/div/div[1]/div[2]/div[2]/span[1]/button/span/span'.</msg>
+<status status="PASS" starttime="20221002 11:47:17.331" endtime="20221002 11:47:17.842"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath: /html/body/div[5]/div[4]/div[1]/div/div[1]/div[2]/div[2]/span[1]/span/div/div[2]/span[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221002 11:47:17.842" level="INFO">Clicking element 'xpath: /html/body/div[5]/div[4]/div[1]/div/div[1]/div[2]/div[2]/span[1]/span/div/div[2]/span[2]'.</msg>
+<status status="PASS" starttime="20221002 11:47:17.842" endtime="20221002 11:47:19.481"/>
+</kw>
+<status status="PASS" starttime="20221002 11:47:17.331" endtime="20221002 11:47:19.482"/>
 </kw>
 <kw name="Verify Filter Results" library="user_defined_ebay">
-<status status="NOT RUN" starttime="20221002 11:46:50.451" endtime="20221002 11:46:50.451"/>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath: /html/body/div[5]/div[4]/div[2]/div[1]/div[2]/ul/li[1]/div/div/div/div/div/ul/li[1]/div/a/div</arg>
+<arg>New</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221002 11:47:19.632" level="INFO">Element 'xpath: /html/body/div[5]/div[4]/div[2]/div[1]/div[2]/ul/li[1]/div/div/div/div/div/ul/li[1]/div/a/div' contains text 'New'.</msg>
+<status status="PASS" starttime="20221002 11:47:19.482" endtime="20221002 11:47:19.633"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath: /html/body/div[5]/div[4]/div[2]/div[1]/div[2]/ul/li[1]/div/div/div/div/div/ul/li[1]/div/a/div/span</arg>
+<arg>Remove filter</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221002 11:47:19.633" level="INFO">Verifying element 'xpath: /html/body/div[5]/div[4]/div[2]/div[1]/div[2]/ul/li[1]/div/div/div/div/div/ul/li[1]/div/a/div/span' contains exact text 'Remove filter'.</msg>
+<status status="PASS" starttime="20221002 11:47:19.633" endtime="20221002 11:47:19.822"/>
+</kw>
+<status status="PASS" starttime="20221002 11:47:19.482" endtime="20221002 11:47:19.822"/>
 </kw>
 <kw name="Finish Testcase" library="common" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221002 11:46:50.452" endtime="20221002 11:46:50.551"/>
+<status status="PASS" starttime="20221002 11:47:19.823" endtime="20221002 11:47:19.928"/>
 </kw>
-<status status="PASS" starttime="20221002 11:46:50.452" endtime="20221002 11:46:50.551"/>
+<status status="PASS" starttime="20221002 11:47:19.823" endtime="20221002 11:47:19.928"/>
 </kw>
 <doc>This test case verifies the basic search functionality for eBay</doc>
 <tag>functional</tag>
-<status status="FAIL" starttime="20221002 11:46:44.112" endtime="20221002 11:46:50.551">Page should have contained text 'results for mobileeee' but did not.</status>
+<status status="PASS" starttime="20221002 11:47:11.305" endtime="20221002 11:47:19.928"/>
 </test>
 <doc>Basic Search Functionality</doc>
-<status status="FAIL" starttime="20221002 11:46:43.946" endtime="20221002 11:46:50.552"/>
+<status status="PASS" starttime="20221002 11:47:11.154" endtime="20221002 11:47:19.929"/>
 </suite>
-<status status="FAIL" starttime="20221002 11:46:43.944" endtime="20221002 11:46:50.554"/>
+<status status="PASS" starttime="20221002 11:47:11.152" endtime="20221002 11:47:19.931"/>
 </suite>
-<status status="FAIL" starttime="20221002 11:46:43.943" endtime="20221002 11:46:50.555"/>
+<status status="PASS" starttime="20221002 11:47:11.151" endtime="20221002 11:47:19.933"/>
 </suite>
 <suite id="s1-s2" name="Google" source="/Users/ckz8780/dev/robot-testing/tests/google">
 <suite id="s1-s2-s1" name="Functional" source="/Users/ckz8780/dev/robot-testing/tests/google/functional">
@@ -74,37 +99,37 @@
 <arg>https://www.google.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221002 11:46:50.565" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
-<status status="PASS" starttime="20221002 11:46:50.564" endtime="20221002 11:46:53.007"/>
+<msg timestamp="20221002 11:47:19.942" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" starttime="20221002 11:47:19.942" endtime="20221002 11:47:22.230"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221002 11:46:53.007" endtime="20221002 11:46:53.078"/>
+<status status="PASS" starttime="20221002 11:47:22.231" endtime="20221002 11:47:22.330"/>
 </kw>
 <doc>Google test</doc>
 <tag>functional</tag>
-<status status="PASS" starttime="20221002 11:46:50.563" endtime="20221002 11:46:53.078"/>
+<status status="PASS" starttime="20221002 11:47:19.941" endtime="20221002 11:47:22.331"/>
 </test>
-<status status="PASS" starttime="20221002 11:46:50.561" endtime="20221002 11:46:53.079"/>
+<status status="PASS" starttime="20221002 11:47:19.938" endtime="20221002 11:47:22.332"/>
 </suite>
-<status status="PASS" starttime="20221002 11:46:50.559" endtime="20221002 11:46:53.081"/>
+<status status="PASS" starttime="20221002 11:47:19.936" endtime="20221002 11:47:22.334"/>
 </suite>
-<status status="PASS" starttime="20221002 11:46:50.556" endtime="20221002 11:46:53.082"/>
+<status status="PASS" starttime="20221002 11:47:19.934" endtime="20221002 11:47:22.336"/>
 </suite>
-<status status="FAIL" starttime="20221002 11:46:43.925" endtime="20221002 11:46:53.083"/>
+<status status="PASS" starttime="20221002 11:47:11.130" endtime="20221002 11:47:22.337"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="1" skip="0">functional</stat>
+<stat pass="2" fail="0" skip="0">functional</stat>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Ebay">Tests.Ebay</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Functional">Tests.Ebay.Functional</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Basic Search">Tests.Ebay.Functional.Basic Search</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Ebay">Tests.Ebay</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Functional">Tests.Ebay.Functional</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Basic Search">Tests.Ebay.Functional.Basic Search</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s2" name="Google">Tests.Google</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s2-s1" name="Functional">Tests.Google.Functional</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s2-s1-s1" name="Google Search">Tests.Google.Functional.Google Search</stat>
